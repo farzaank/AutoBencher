@@ -34,7 +34,6 @@ Reply "TERMINATE" in the end when everything is done.
 DEFAULT_DESCRIPTION = "A helpful and general-purpose AI assistant that has strong language skills, Python skills, and Linux command line skills."
 
 
-
 def extract_json_v2(json_text, outfilename):
     response = json_text.replace("TERMINATE", "")
     if "```json" in response:
@@ -43,14 +42,18 @@ def extract_json_v2(json_text, outfilename):
             extracted_json = extract_code(response)
             combined_json = sum([], [ast.literal_eval(xx[1]) for xx in extracted_json])
         except:
-            if '...' in response:
-                response = response.replace('...', '')
+            if "..." in response:
+                response = response.replace("...", "")
                 extracted_json = extract_code(response)
-                combined_json = sum([], [ast.literal_eval(xx[1]) for xx in extracted_json])
+                combined_json = sum(
+                    [], [ast.literal_eval(xx[1]) for xx in extracted_json]
+                )
             else:
-                response2 = "\n".join(response.split('\n')[:-1]) + "]\n```"
+                response2 = "\n".join(response.split("\n")[:-1]) + "]\n```"
                 extracted_json = extract_code(response2)
-                combined_json = sum([], [ast.literal_eval(xx[1]) for xx in extracted_json])
+                combined_json = sum(
+                    [], [ast.literal_eval(xx[1]) for xx in extracted_json]
+                )
         # load the json_string.
         json_dict = combined_json
         # json_dict = ast.literal_eval(combined_json)
@@ -62,7 +65,10 @@ def extract_json_v2(json_text, outfilename):
         assert False, "fail to output json file."
     return json_dict
 
-def test_taker_inference(test_model_info, problem_json, outfile, bsz=1, temperature=0.01, max_length=50):
+
+def test_taker_inference(
+    test_model_info, problem_json, outfile, bsz=1, temperature=0.01, max_length=50
+):
     if len(test_model_info) == 3:
         model_choice, tokenizer_choice, client_choice = test_model_info
         auth = None
@@ -71,48 +77,73 @@ def test_taker_inference(test_model_info, problem_json, outfile, bsz=1, temperat
         model_choice, tokenizer_choice, client_choice, auth = test_model_info
         use_helm = True
 
-    print(f'writing to {outfile}')
-    out_handle = open(outfile, 'w')
+    print(f"writing to {outfile}")
+    out_handle = open(outfile, "w")
     full_result_lst = []
     batch_lst, line_lst = [], []
     for line in tqdm.tqdm(problem_json):
-        line['prompt'] = "Output just with the final answer to the question.\nQuestion:" + line[
-            'question'] + "\n" + "Answer:"
+        if "question" not in line.keys():
+            line["question"] = line["prompt"]
+        line["prompt"] = (
+            "Output just with the final answer to the question.\nQuestion:"
+            + line["question"]
+            + "\n"
+            + "Answer:"
+        )
         line_lst.append(line)
-        batch_lst.append(line['prompt'])
+        batch_lst.append(line["prompt"])
         if len(batch_lst) < bsz:
             continue  # batch not full yet
-        request_result = gen_from_prompt(model=model_choice, tokenizer=tokenizer_choice, prompt=batch_lst,
-                                         echo_prompt=False, temperature=temperature, max_tokens=max_length,
-                                         service=client_choice,
-                                         terminate_by_linebreak='no', use_helm=use_helm, auth=auth,
-                                         verbose=False)
+        request_result = gen_from_prompt(
+            model=model_choice,
+            tokenizer=tokenizer_choice,
+            prompt=batch_lst,
+            echo_prompt=False,
+            temperature=temperature,
+            max_tokens=max_length,
+            service=client_choice,
+            terminate_by_linebreak="no",
+            use_helm=use_helm,
+            auth=auth,
+            verbose=False,
+        )
 
         for line, xx in zip(line_lst, request_result.completions):
             # print(line['prompt'])
             # print('-' * 100)
             # print(xx.text)
-            line['test_taker_response'] = xx.text
+            line["test_taker_response"] = xx.text
             print(json.dumps(line), file=out_handle)
             full_result_lst.append(line)
         batch_lst, line_lst = [], []
     if len(batch_lst) > 0:
-        request_result = gen_from_prompt(model=model_choice, tokenizer=tokenizer_choice, prompt=batch_lst,
-                                         echo_prompt=False, temperature=temperature, max_tokens=max_length,
-                                         service=args.model_auth, terminate_by_linebreak='no', use_helm=use_helm,
-                                         auth=auth, verbose=False)
+        request_result = gen_from_prompt(
+            model=model_choice,
+            tokenizer=tokenizer_choice,
+            prompt=batch_lst,
+            echo_prompt=False,
+            temperature=temperature,
+            max_tokens=max_length,
+            service=args.model_auth,
+            terminate_by_linebreak="no",
+            use_helm=use_helm,
+            auth=auth,
+            verbose=False,
+        )
         for line, xx in zip(line_lst, request_result.completions):
-            line['test_taker_response'] = xx.text
+            line["test_taker_response"] = xx.text
             print(json.dumps(line), file=out_handle)
             full_result_lst.append(line)
     out_handle.close()
     return full_result_lst
 
 
-def _generate_lm_answers(question_inputs, test_model_info, agent_model_info, outfile_prefix='att1'):
+def _generate_lm_answers(
+    question_inputs, test_model_info, agent_model_info, outfile_prefix="att1"
+):
     if os.path.exists(f"{outfile_prefix}.test_taker_inference.json"):
         full_result_lst = []
-        with open(f"{outfile_prefix}.test_taker_inference.json", 'r') as in_handle:
+        with open(f"{outfile_prefix}.test_taker_inference.json", "r") as in_handle:
             for line in in_handle:
                 line = json.loads(line.strip())
                 full_result_lst.append(line)
@@ -129,14 +160,16 @@ def _generate_lm_answers(question_inputs, test_model_info, agent_model_info, out
     elif isinstance(question_inputs, list):
         json_dict = question_inputs
     else:
-        print('question_inputs should be a list.')
+        print("question_inputs should be a list.")
         assert False
 
-    full_result_lst = test_taker_inference(test_model_info, json_dict,
-                                           outfile=f"{outfile_prefix}.test_taker_inference.json")
+    full_result_lst = test_taker_inference(
+        test_model_info,
+        json_dict,
+        outfile=f"{outfile_prefix}.test_taker_inference.json",
+    )
 
     return full_result_lst
-
 
 
 def search_related_pages(search_query):
@@ -149,10 +182,10 @@ def search_related_pages(search_query):
     # Checking if request was successful
     if response.status_code == 200:
         data = response.json()
-        search_results = data['query']['search']
+        search_results = data["query"]["search"]
 
         # Extracting titles of the search results
-        related_pages = [result['title'] for result in search_results]
+        related_pages = [result["title"] for result in search_results]
         return related_pages
     else:
         print("Failed to retrieve data from Wikipedia API.")
@@ -164,8 +197,8 @@ def get_pageviews(page_title, start_date="2020040100", end_date="2023040700"):
     client_id = "001d11f6d635f0f8bb709d5eb7fa44eb"
     client_secret = "630b434daa4c8f6cce03b1c294b59574c1ce9431"  # Example client secret
     headers = {
-        'Authorization': f'Bearer {access_token}',
-        'User-Agent': 'wikipagerank',
+        "Authorization": f"Bearer {access_token}",
+        "User-Agent": "wikipagerank",
     }
 
     # Construct the API URL with the appropriate parameters
@@ -177,18 +210,22 @@ def get_pageviews(page_title, start_date="2020040100", end_date="2023040700"):
         # Parse the JSON response
         data = response.json()
         # Extract the pageview data
-        print('retrieved for ', page_title)
-        views = sum(item['views'] for item in data['items'])
+        print("retrieved for ", page_title)
+        views = sum(item["views"] for item in data["items"])
         return views
     else:
-        print(f"Failed to retrieve pageviews data for {page_title}. Status code: {response.status_code}")
+        print(
+            f"Failed to retrieve pageviews data for {page_title}. Status code: {response.status_code}"
+        )
         return 0
 
+
 def clean_str(p):
-  try:
-    return p.encode().decode("unicode-escape").encode("latin1").decode("utf-8")
-  except:
-    return ''
+    try:
+        return p.encode().decode("unicode-escape").encode("latin1").decode("utf-8")
+    except:
+        return ""
+
 
 def filter_paragraph(paragraph_lst):
     return [p for p in paragraph_lst if len(p.split(" ")) > 2 and len(p.split(".")) > 1]
@@ -208,26 +245,28 @@ def search_step(entity, output_more=False):
     soup = BeautifulSoup(response_text, features="html.parser")
     result_divs = soup.find_all("div", {"class": "mw-search-result-heading"})
     if result_divs:  # mismatch
-      result_titles = [clean_str(div.get_text().strip()) for div in result_divs]
-      # obs = f"Could not find {entity}. Similar: {result_titles[:5]}."
-      print(f"Could not find {entity}. Search for similar entities, {result_titles[0]}, instead")
-      obs, entity = search_step(result_titles[0])
+        result_titles = [clean_str(div.get_text().strip()) for div in result_divs]
+        # obs = f"Could not find {entity}. Similar: {result_titles[:5]}."
+        print(
+            f"Could not find {entity}. Search for similar entities, {result_titles[0]}, instead"
+        )
+        obs, entity = search_step(result_titles[0])
     else:
-      print('found entity', entity)
-      page = [p.get_text().strip() for p in soup.find_all("p") + soup.find_all("ul")]
-      if any("may refer to:" in p for p in page):
-        obs, entity = search_step("[" + entity + "]")
-      else:
-        page_ = ""
-        for p in page:
-          if len(p.split(" ")) > 2:
-              page_ += clean_str(p)
-              if not p.endswith("\n"):
-                  page_ += "\n"
-        obs = get_page_obs(page_)
-        if output_more:
-            obs = filter_paragraph(obs)
+        print("found entity", entity)
+        page = [p.get_text().strip() for p in soup.find_all("p") + soup.find_all("ul")]
+        if any("may refer to:" in p for p in page):
+            obs, entity = search_step("[" + entity + "]")
         else:
-            obs = filter_paragraph(obs[:10])
+            page_ = ""
+            for p in page:
+                if len(p.split(" ")) > 2:
+                    page_ += clean_str(p)
+                    if not p.endswith("\n"):
+                        page_ += "\n"
+            obs = get_page_obs(page_)
+            if output_more:
+                obs = filter_paragraph(obs)
+            else:
+                obs = filter_paragraph(obs[:10])
 
     return obs, entity

@@ -110,6 +110,39 @@ def gen_from_prompt(
     use_helm=False,
     auth=None,
 ):
+    """print("GEN FROM PROMPT RUNNING")
+    print(
+        "model=",
+        model,
+        "tokenizer=",
+        tokenizer,
+        "prompt=",
+        prompt,
+        "echo_prompt=",
+        echo_prompt,
+        "temperature=",
+        temperature,
+        "max_tokens=",
+        max_tokens,
+        "num_completions=",
+        num_completions,
+        "output_scores=",
+        output_scores,
+        "service=",
+        service,
+        "seed=",
+        seed,
+        "process_func=",
+        process_func,
+        "terminate_by_linebreak=",
+        terminate_by_linebreak,
+        "verbose=",
+        verbose,
+        "use_helm=",
+        use_helm,
+        "auth=",
+        auth,
+    )"""
     if service is None:
         assert model is not None
         if process_func is not None:

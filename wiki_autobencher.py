@@ -648,7 +648,7 @@ if __name__ == '__main__':
     parser.add_argument('--tool_modelname', default=None)  # option that takes a value
     parser.add_argument('--temperature', type=float, default=0.001)  # option that takes a value
     parser.add_argument('--pairwise', type=str, default='no')  # option that takes a value
-    parser.add_argument('--exp_mode', type=str, default='autobencher')  # option that takes a value
+    parser.add_argument('--exp_mode', type=str, default='naive_baseline')  # option that takes a value
     parser.add_argument('--theme', type=str, default='history')  # option that takes a value
     parser.add_argument('--use_helm', type=str, default='yes')  # option that takes a value
     parser.add_argument('--top_p', type=float, default=0.9)  # option that takes a value

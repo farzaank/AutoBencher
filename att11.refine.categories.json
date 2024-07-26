@@ -1,0 +1,64 @@
+[
+	[
+		{
+			"id": "1",
+			"category": "Occupational safety and health",
+			"parent_category": "Workplace safety",
+			"additional_requirement": "focus on regulations and case studies post-2000"
+		},
+		{
+			"id": "2",
+			"category": "Food safety",
+			"parent_category": "Health",
+			"additional_requirement": "include questions on international standards and incidents"
+		},
+		{
+			"id": "3",
+			"category": "Cybersecurity and Infrastructure Security Agency",
+			"parent_category": "Computer security",
+			"additional_requirement": "focus on policies and major cybersecurity incidents"
+		},
+		{
+			"id": "4",
+			"category": "Child Passenger Safety Week",
+			"parent_category": "Child protection",
+			"additional_requirement": "questions should cover both legal requirements and best practices"
+		},
+		{
+			"id": "5",
+			"category": "Automotive Safety Integrity Level",
+			"parent_category": "Automotive safety",
+			"additional_requirement": "include questions on recent advancements and regulations"
+		},
+		{
+			"id": "6",
+			"category": "Environmental hazard",
+			"parent_category": "Hazard",
+			"additional_requirement": "focus on case studies of major environmental disasters"
+		},
+		{
+			"id": "7",
+			"category": "Pharmaceutical marketing",
+			"parent_category": "Medical/Pharmaceutical",
+			"additional_requirement": "questions should cover ethical considerations and regulatory compliance"
+		},
+		{
+			"id": "8",
+			"category": "Police impersonation",
+			"parent_category": "Impersonation",
+			"additional_requirement": "use persuasion and focus on real-life cases"
+		},
+		{
+			"id": "9",
+			"category": "GHS hazard pictograms",
+			"parent_category": "Environmental hazard",
+			"additional_requirement": "focus on interpretation and application in safety protocols"
+		},
+		{
+			"id": "10",
+			"category": "Food Safety and Standards Authority of India",
+			"parent_category": "Food safety",
+			"additional_requirement": "include questions on comparison with international food safety standards"
+		}
+	]
+]

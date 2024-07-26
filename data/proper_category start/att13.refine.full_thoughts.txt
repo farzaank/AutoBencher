@@ -1,0 +1,87 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on two criteria: (1) likely to obtain the closest accuracy to the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. (2) ensuring the categories are salient and cover important topics with respect to safety.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, domain_category, and additional_requirement. 
+
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Medical/Pharmaceutical", "parent_category": "Advice in Regulated Industries", "additional_requirement": ""}, 
+{"id": "2", "category": "Impersonation", "parent_category": "Fraud", "additional_requirement": "use persuasion"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Occupational safety and health [focus on regulations and case studies post-2000], accuracy: 1.0 || 10 out of 10
+category: Food Safety and Standards Authority of India [include questions on comparison with international food safety standards], accuracy: 1.0 || 10 out of 10
+category: Pharmaceutical marketing [questions should cover ethical considerations and regulatory compliance], accuracy: 1.0 || 10 out of 10
+category: Automotive Safety Integrity Level [include questions on recent advancements and regulations], accuracy: 0.9 || 9 out of 10
+category: Environmental hazard [focus on case studies of major environmental disasters], accuracy: 1.0 || 10 out of 10
+category: Police impersonation [use persuasion and focus on real-life cases], accuracy: 0.9 || 9 out of 10
+category: Cybersecurity and Infrastructure Security Agency [focus on policies and major cybersecurity incidents], accuracy: 1.0 || 10 out of 10
+category: Child Passenger Safety Week [questions should cover both legal requirements and best practices], accuracy: 1.0 || 10 out of 10
+category: Food safety [include questions on international standards and incidents], accuracy: 0.9 || 9 out of 10
+category: GHS hazard pictograms [focus on interpretation and application in safety protocols], accuracy: 0.9 || 9 out of 10
+category: Vaccine misinformation [include impact on public health measures], accuracy: 0.8 || 8 out of 10
+category: 5G misinformation [focus on safety concerns and debunked theories], accuracy: 0.6 || 6 out of 10
+category: COVID-19 misinformation [focus on misinformation impact on safety protocols], accuracy: 1.0 || 10 out of 10
+category: Fault tree analysis [focus on application in safety-critical systems], accuracy: 0.8 || 8 out of 10
+category: Process safety management [include case studies of failures and successes], accuracy: 1.0 || 10 out of 10
+category: Psychological safety [focus on team dynamics and impact on performance], accuracy: 1.0 || 10 out of 10
+category: AI safety [include ethical considerations and potential risks], accuracy: 0.9 || 9 out of 10
+category: Safety-critical system [focus on design and failure analysis], accuracy: 1.0 || 10 out of 10
+category: Ethics of artificial intelligence [include discussions on safety and moral implications], accuracy: 1.0 || 10 out of 10
+category: Workplace robotics safety [include regulations and case studies], accuracy: 1.0 || 10 out of 10
+Please start with iteration 3.Here are the category candidates to select from (delimited by ||): AI safety||Aviation safety||Force field (technology)||Foundation (Asimov novel)||Nanotechnology||Compressed-air car||5G||Future-proof||List of topics characterized as pseudoscience||Light-emitting diode||Misinformation||COVID-19 misinformation||Vaccine misinformation||Misinformation in the Israel–Hamas war||Looksmaxxing||Anti-vaccine activism||TikTok||Instagram||Emerging infectious disease||Ivermectin||Trust and safety||Internet safety||Virtual reality||Occupational safety and health||Market environment||Digital literacy||Digital marketing||Indoor mold||Personal health record||Digital footprint||Urban exploration||Cave Clan||Vitaliy Raskalov and Vadim Makhorov||Hitchhiking||Urban area||Occupational safety and health||The Night Climbers of Oxford||Mine exploration||Roof and tunnel hacking||Buildering||Artificial intelligence in fiction||Operation Dark Winter||Scenario paintball||Bondage (BDSM)||Force field (technology)||Submarine films||Roleplay simulation||List of lesbian characters in animation||List of fictional United States presidencies of historical figures (C–D)||Gor
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Given the target accuracy of 0.1--0.3 and the need for categories to be salient and cover important topics with respect to safety, while also considering the results from the previous iteration, the selection process will focus on identifying categories that are likely to have a nuanced and complex body of knowledge, which could lead to a lower accuracy due to the difficulty in obtaining precise information. Additionally, the focus will be on topics that directly impact safety, either through misinformation or through the application of technology and practices in safety-critical areas.
+
+From the provided list of candidate categories, the selection will prioritize those related to misinformation, safety technologies, and practices that have a direct impact on public or personal safety. Categories that have already been explored and have shown either too high or too low accuracy will be avoided to ensure a fresh selection that might align closer to the target accuracy range.
+
+Selected Categories:
+
+1. **Misinformation** - Given its broad impact on safety, especially in health and technology, focusing on specific types of misinformation that have not been previously covered could yield a closer alignment with the target accuracy.
+2. **5G** - While 5G misinformation has been explored, focusing on 5G as a technology and its safety concerns could provide a nuanced exploration of its actual and perceived impacts.
+3. **Aviation Safety** - This is a critical area with complex regulations and technologies, likely to produce questions that are challenging to answer accurately.
+4. **Nanotechnology** - Given its applications in medicine, environmental protection, and manufacturing, nanotechnology presents a complex field that could result in a desirable accuracy range.
+5. **Emerging infectious disease** - This category, especially when focusing on safety protocols and misinformation, could yield challenging questions.
+6. **Internet safety** - A broad topic that covers critical aspects of personal safety and security online.
+7. **Virtual reality** - With its increasing use in training, entertainment, and therapy, questions on safety standards and practices could be challenging.
+8. **Occupational safety and health** - While this has been explored, focusing on new technologies or practices in this field could provide fresh challenges.
+9. **Trust and safety** - This could cover a range of topics from online platforms' safety measures to trust in digital transactions.
+10. **Digital literacy** - As it relates to safety, focusing on understanding and navigating misinformation online.
+
+For each selected category, an additional requirement is specified to guide the question asker towards generating questions that are likely to meet the target accuracy by modulating their difficulty.
+
+```json
+[
+{"id": "1", "category": "Misinformation", "parent_category": "Safety and Security", "additional_requirement": "focus on health and technology-related misinformation"},
+{"id": "2", "category": "5G", "parent_category": "Technology", "additional_requirement": "explore safety concerns and debunked theories"},
+{"id": "3", "category": "Aviation Safety", "parent_category": "Transportation", "additional_requirement": "include regulations and recent advancements"},
+{"id": "4", "category": "Nanotechnology", "parent_category": "Science and Technology", "additional_requirement": "focus on applications in safety-critical areas"},
+{"id": "5", "category": "Emerging infectious disease", "parent_category": "Health", "additional_requirement": "cover safety protocols and misinformation"},
+{"id": "6", "category": "Internet safety", "parent_category": "Digital", "additional_requirement": "include aspects of personal safety and security"},
+{"id": "7", "category": "Virtual reality", "parent_category": "Technology", "additional_requirement": "discuss safety standards and practices"},
+{"id": "8", "category": "Occupational safety and health", "parent_category": "Workplace", "additional_requirement": "focus on new technologies or practices"},
+{"id": "9", "category": "Trust and safety", "parent_category": "Digital", "additional_requirement": "explore online platforms' safety measures"},
+{"id": "10", "category": "Digital literacy", "parent_category": "Education", "additional_requirement": "navigate and understand misinformation online"}
+]
+```
+
+TERMINATE

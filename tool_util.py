@@ -82,14 +82,15 @@ def test_taker_inference(
     full_result_lst = []
     batch_lst, line_lst = [], []
     for line in tqdm.tqdm(problem_json):
-        if "question" not in line.keys():
+        if "question" in line.keys():
+            line["prompt"] = (
+                "Output just with the final answer to the question.\nQuestion:"
+                + line["question"]
+                + "\n"
+                + "Answer:"
+            )
+        else:
             line["question"] = line["prompt"]
-        line["prompt"] = (
-            "Output just with the final answer to the question.\nQuestion:"
-            + line["question"]
-            + "\n"
-            + "Answer:"
-        )
         line_lst.append(line)
         batch_lst.append(line["prompt"])
         if len(batch_lst) < bsz:

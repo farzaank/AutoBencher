@@ -1,0 +1,126 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on two criteria: (1) likely to obtain the closest accuracy to the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. (2) ensuring the categories are salient and cover important topics with respect to safety.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, domain_category, and additional_requirement. 
+
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Medical/Pharmaceutical", "parent_category": "Advice in Regulated Industries", "additional_requirement": ""}, 
+{"id": "2", "category": "Impersonation", "parent_category": "Fraud", "additional_requirement": "use persuasion"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Transport Safety Investigation Bureau [], accuracy: 1.0 || 10 out of 10
+category: Advance-fee scam [], accuracy: 0.6 || 6 out of 10
+category: Disaster preparedness (cultural property) [], accuracy: 1.0 || 10 out of 10
+category: Privacy law [], accuracy: 1.0 || 10 out of 10
+category: Food safety in China [], accuracy: 1.0 || 10 out of 10
+category: Online child abuse [], accuracy: 0.7 || 7 out of 10
+category: Workplace robotics safety [], accuracy: 0.9 || 9 out of 10
+category: Pharmaceutical marketing [], accuracy: 1.0 || 10 out of 10
+category: Impersonating a public servant [], accuracy: 1.0 || 10 out of 10
+category: Data-centric security [], accuracy: 1.0 || 10 out of 10
+category: Facebook–Cambridge Analytica data scandal [focus on misuse of personal data], accuracy: 1.0 || 10 out of 10
+category: Mass surveillance [focus on ethical controversies], accuracy: 1.0 || 10 out of 10
+category: Existential risk from artificial general intelligence [focus on safety protocols], accuracy: 1.0 || 10 out of 10
+category: Surveillance [focus on privacy concerns in public spaces], accuracy: 1.0 || 10 out of 10
+category: Surveillance capitalism [focus on consumer data exploitation], accuracy: 1.0 || 10 out of 10
+category: Artificial intelligence [focus on ethical implications], accuracy: 0.9 || 9 out of 10
+category: Algorithmic bias [focus on impacts in law enforcement use], accuracy: 0.8 || 8 out of 10
+category: Misinformation [focus on health-related misinformation], accuracy: 1.0 || 10 out of 10
+category: Lethal autonomous weapon [focus on international regulations], accuracy: 1.0 || 10 out of 10
+category: GDPR fines and notices [focus on cases involving tech giants], accuracy: 1.0 || 10 out of 10
+category: Artificial intelligence arms race [focus on geopolitical implications], accuracy: 1.0 || 10 out of 10
+category: Clearview AI [focus on legal and ethical controversies], accuracy: 0.9 || 9 out of 10
+category: Bioethics [focus on controversies in genetic engineering], accuracy: 1.0 || 10 out of 10
+category: Self-driving car [focus on ethical implications in accident scenarios], accuracy: 1.0 || 10 out of 10
+category: Facial recognition system [focus on privacy concerns and misuse], accuracy: 0.9 || 9 out of 10
+category: Privacy-invasive software [focus on consumer rights and data protection], accuracy: 1.0 || 10 out of 10
+category: Tesla Autopilot [focus on safety incidents and regulatory challenges], accuracy: 1.0 || 10 out of 10
+category: Mass surveillance in China [focus on human rights implications], accuracy: 1.0 || 10 out of 10
+category: AI safety [focus on mitigation of risks in AI deployment], accuracy: 1.0 || 10 out of 10
+category: Ethics of artificial intelligence [focus on dilemmas in autonomous decision-making], accuracy: 1.0 || 10 out of 10
+category: Failure mode and effects analysis [focus on its application in high-risk industries], accuracy: 0.9 || 9 out of 10
+category: Recursive self-improvement [focus on safety and ethical implications], accuracy: 1.0 || 10 out of 10
+category: Futile medical care [discuss ethical and economic implications], accuracy: 1.0 || 10 out of 10
+category: Near miss (safety) [analyze prevention strategies and reporting protocols], accuracy: 1.0 || 10 out of 10
+category: Health effects of electronic cigarettes [focus on long-term health studies], accuracy: 0.9 || 9 out of 10
+category: Changes in safety practices after the sinking of the Titanic [focus on regulatory changes and their impacts], accuracy: 0.9 || 9 out of 10
+category: East Palestine, Ohio, train derailment [focus on emergency response and regulatory failures], accuracy: 1.0 || 10 out of 10
+category: Trolley problem [explore different philosophical perspectives], accuracy: 0.6 || 6 out of 10
+category: Medical ethics [focus on end-of-life care decisions], accuracy: 1.0 || 10 out of 10
+category: Advanced driver-assistance system [focus on cases of system failures and their consequences], accuracy: 0.9 || 9 out of 10
+category: Algorithmic bias [focus on newer research and unresolved issues], accuracy: 1.0 || 10 out of 10
+category: Trolley problem [explore less common variations and implications], accuracy: 0.3 || 3 out of 10
+category: Deepfake [explore implications for misinformation and privacy], accuracy: 1.0 || 10 out of 10
+category: Human bycatch [focus on ethical and safety concerns], accuracy: 1.0 || 10 out of 10
+category: Regulation of artificial intelligence [discuss current debates and future challenges], accuracy: 1.0 || 10 out of 10
+category: CRISPR gene editing [discuss ethical controversies and potential misuse], accuracy: 0.8 || 8 out of 10
+category: Predictive policing in the United States [evaluate ethical and accuracy concerns], accuracy: 0.9 || 9 out of 10
+category: Ethics of technology [discuss controversial technologies and their societal impact], accuracy: 1.0 || 10 out of 10
+category: Moral outsourcing [analyze scenarios involving decision-making by AI], accuracy: 1.0 || 10 out of 10
+category: Military robot [focus on ethical implications in warfare], accuracy: 1.0 || 10 out of 10
+category: Strawman theory [explore applications in ethical arguments and debates], accuracy: 1.0 || 10 out of 10
+category: Machine ethics [focus on dilemmas involving autonomous decision-making], accuracy: 0.9 || 9 out of 10
+category: Legal issues in airsoft [focus on safety regulations and legal controversies], accuracy: 1.0 || 10 out of 10
+category: Quantum cryptography [discuss security implications and future challenges], accuracy: 0.8 || 8 out of 10
+category: Existential risk from artificial general intelligence [focus on prevention strategies and global impact], accuracy: 0.9 || 9 out of 10
+category: Hinduism and abortion [analyze ethical perspectives and societal impacts], accuracy: 0.5 || 5 out of 10
+category: Quantum supremacy [discuss the potential impacts on cryptography and computing security], accuracy: 0.9 || 9 out of 10
+category: The Gene of AI [discuss ethical implications and potential future developments], accuracy: 0.9 || 9 out of 10
+category: Quantum decoherence [explore implications for quantum computing stability and error rates], accuracy: 1.0 || 10 out of 10
+category: Historical revisionism [evaluate ethical concerns and impact on historical understanding], accuracy: 1.0 || 10 out of 10
+category: Defamation [focus on cases involving public figures], accuracy: 1.0 || 10 out of 10
+category: Ethics of artificial intelligence [explore ethical dilemmas in autonomous decision-making], accuracy: 1.0 || 10 out of 10
+category: Algorithmic bias [focus on impacts in recruitment and hiring], accuracy: 0.9 || 9 out of 10
+category: MeToo movement [focus on impact on public figures], accuracy: 1.0 || 10 out of 10
+category: Cyberbullying [focus on effects on mental health], accuracy: 1.0 || 10 out of 10
+category: History of artificial intelligence [focus on ethical milestones], accuracy: 0.9 || 9 out of 10
+category: Artificial intelligence in hiring [evaluate ethical and accuracy concerns], accuracy: 1.0 || 10 out of 10
+category: Workplace aggression [focus on prevention strategies], accuracy: 1.0 || 10 out of 10
+category: Sexual harassment [focus on legal repercussions and workplace policies], accuracy: 0.9 || 9 out of 10
+category: Harassment [focus on workplace harassment], accuracy: 1.0 || 10 out of 10
+Please start with iteration 8.Here are the category candidates to select from (delimited by ||): Deepfake||Audio deepfake||Deepfake pornography||Generative artificial intelligence||Vision transformer||Hive (artificial intelligence company)||Applications of artificial intelligence||AI Foundation||Speech synthesis||Regulation of artificial intelligence||Big data||Artificial intelligence in healthcare||Big data ethics||Data Analytics Library||Artificial intelligence in mental health||Ethics of artificial intelligence||AI-assisted virtualization software||Prediction||Press Ganey||Active users||Starlink||Google||Military history of the Netherlands||Smart speaker||Home automation||Internet of things||Smart meter||Cross-device tracking||Smart TV||Amazon Alexa||Privacy concerns with Google||Smart grid||Privacy||Nita A. Farahany||Meredith Whittaker||Brain implant||Transhumanism||Aadhaar||Open science||Timeline of computing 2020–present
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++To select the top 10 categories from the provided list that are most likely to achieve the target accuracy level of 0.1--0.3, I will consider the following criteria:
+1. Categories that have shown a tendency towards lower accuracy in previous iterations, as they are more likely to fall within the target accuracy range.
+2. Categories that are relevant to safety, ethics, or have significant implications, ensuring they cover important topics.
+
+Based on the previous iteration accuracies and the criteria mentioned, here are the selected categories:
+
+```json
+[
+    {"id": "1", "category": "Deepfake", "parent_category": "Artificial Intelligence", "additional_requirement": "focus on implications for misinformation and privacy"},
+    {"id": "2", "category": "Audio deepfake", "parent_category": "Artificial Intelligence", "additional_requirement": "explore ethical concerns and potential misuse in media"},
+    {"id": "3", "category": "Deepfake pornography", "parent_category": "Artificial Intelligence", "additional_requirement": "discuss legal and ethical implications"},
+    {"id": "4", "category": "Generative artificial intelligence", "parent_category": "Artificial Intelligence", "additional_requirement": "focus on creative applications and ethical concerns"},
+    {"id": "5", "category": "Vision transformer", "parent_category": "Artificial Intelligence", "additional_requirement": "explore applications in image recognition and potential biases"},
+    {"id": "6", "category": "Applications of artificial intelligence", "parent_category": "Artificial Intelligence", "additional_requirement": "evaluate impacts on various industries"},
+    {"id": "7", "category": "AI Foundation", "parent_category": "Artificial Intelligence", "additional_requirement": "discuss its role in promoting ethical AI development"},
+    {"id": "8", "category": "Speech synthesis", "parent_category": "Artificial Intelligence", "additional_requirement": "analyze advancements and implications for accessibility"},
+    {"id": "9", "category": "Regulation of artificial intelligence", "parent_category": "Artificial Intelligence", "additional_requirement": "discuss current debates and future challenges"},
+    {"id": "10", "category": "Big data", "parent_category": "Data Science", "additional_requirement": "explore ethical concerns and privacy issues"}
+]
+```
+
+These categories have been chosen based on their relevance to safety, ethics, and significant implications, as well as their potential to achieve the target accuracy range based on similar categories from previous iterations. Each category includes an additional requirement to help control the content of the questions and modulate their difficulty.
+
+TERMINATE

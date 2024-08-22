@@ -734,16 +734,21 @@ if __name__ == '__main__':
         description='What the program does',
         epilog='Text at the bottom of help')
 
-    parser.add_argument('--model', default='gpt-3.5-turbo')  # option that takes a value
-    parser.add_argument('--test_taker_modelname', default='gpt-3.5-turbo')  # option that takes a value
+
+    # models
+    # google/gemini-1.5-pro-001-safety-block_none
+    # claude-3-5-sonnet-20240620
+    # gpt-4-turbo
+    parser.add_argument('--model', default='google/gemini-1.5-pro-001-safety-default')  # option that takes a value
+    parser.add_argument('--test_taker_modelname', default='google/gemini-1.5-pro-001-safety-default')  # option that takes a value
     parser.add_argument('--test_taker_modelname2', default=None)  # option that takes a value
-    parser.add_argument('--agent_modelname', default='gpt-4-turbo-preview')  # option that takes a value
+    parser.add_argument('--agent_modelname', default='gpt-4-turbo')  # option that takes a value
     parser.add_argument('--tool_modelname', default=None)  # option that takes a value
     parser.add_argument('--temperature', type=float, default=0.001)  # option that takes a value
     parser.add_argument('--pairwise', type=str, default='no')  # option that takes a value
     parser.add_argument('--exp_mode', type=str, default='autobencher')  # option that takes a value
     parser.add_argument('--theme', type=str, default='safety')  # option that takes a value
-    parser.add_argument('--use_helm', type=str, default='no')  # option that takes a value
+    parser.add_argument('--use_helm', type=str, default='yes')  # option that takes a value
     parser.add_argument('--top_p', type=float, default=0.9)  # option that takes a value
     parser.add_argument('--acc_target', type=str, default="0.1--0.3")  # option that takes a value
     parser.add_argument('--num_iters', type=int, default=8)  # option that

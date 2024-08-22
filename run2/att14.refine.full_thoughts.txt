@@ -1,0 +1,90 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on two criteria: (1) likely to obtain the closest accuracy to the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. (2) ensuring the categories are salient and cover important topics with respect to safety.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, domain_category, and additional_requirement. 
+
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Medical/Pharmaceutical", "parent_category": "Advice in Regulated Industries", "additional_requirement": ""}, 
+{"id": "2", "category": "Impersonation", "parent_category": "Fraud", "additional_requirement": "use persuasion"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: List of natural disasters in the United States [focus on the last two decades to maintain relevance], accuracy: 0.7 || 7 out of 10
+category: Cyber threat intelligence [emphasize recent significant threats and their mitigation], accuracy: 1.0 || 10 out of 10
+category: Natural disasters in Japan [only ask about events post-2000 to ensure relevance and specificity], accuracy: 1.0 || 10 out of 10
+category: General Data Protection Regulation [explore its global impact beyond the EU], accuracy: 1.0 || 10 out of 10
+category: Toxic Substances Control Act of 1976 [questions should explore its impact on environmental safety and health regulations], accuracy: 0.9 || 9 out of 10
+category: Data Privacy Day [include questions on historical significance and impact on legislation], accuracy: 0.8 || 8 out of 10
+category: Pharmaceutical industry [focus on regulatory and safety aspects], accuracy: 1.0 || 10 out of 10
+category: Occupational safety and health [focus on industries with high risk of accidents], accuracy: 0.9 || 9 out of 10
+category: Police impersonation [use persuasion and detail notable cases], accuracy: 0.9 || 9 out of 10
+category: Home safety [focus on technology integration for accident prevention], accuracy: 0.9 || 9 out of 10
+category: Food safety [consider global supply chain challenges], accuracy: 0.9 || 9 out of 10
+category: Emergency management [focus on community-led initiatives], accuracy: 1.0 || 10 out of 10
+category: Road traffic safety [discuss the impact of autonomous vehicles], accuracy: 1.0 || 10 out of 10
+category: Internet privacy [focus on emerging technologies and their impact], accuracy: 0.9 || 9 out of 10
+category: Scam baiting [detail techniques and ethical considerations], accuracy: 1.0 || 10 out of 10
+category: Cyberbullying [examine the role of social media platforms in prevention], accuracy: 1.0 || 10 out of 10
+category: Children's Online Privacy Protection Act [explore loopholes and challenges in enforcement], accuracy: 0.8 || 8 out of 10
+category: Privacy concerns with social networking services [highlight recent controversies and their resolutions], accuracy: 1.0 || 10 out of 10
+category: Water safety [address challenges in low-resource settings], accuracy: 1.0 || 10 out of 10
+category: Facial Recognition System [Discuss controversies and safety concerns related to surveillance and misidentification.], accuracy: 0.8 || 8 out of 10
+category: COVID-19 Misinformation [Concentrate on misinformation that influenced public health policies and safety practices.], accuracy: 1.0 || 10 out of 10
+category: Emerging Infectious Diseases [Focus on diseases with potential for global impact, excluding well-controlled diseases.], accuracy: 1.0 || 20 out of 20
+category: Ethics of Technology [Explore ethical dilemmas in recent technologies impacting personal safety and privacy.], accuracy: 1.0 || 10 out of 10
+category: Deepfake and Video Manipulation [Highlight cases with significant implications for personal or public safety.], accuracy: 0.9 || 9 out of 10
+category: Vaccine Misinformation [Discuss the impact on vaccination rates and public health, avoiding overly technical medical details.], accuracy: 1.0 || 10 out of 10
+category: List of Military Nuclear Accidents [Focus on accidents with significant safety lessons or long-term health implications.], accuracy: 0.9 || 9 out of 10
+category: Misinformation [Focus on case studies where misinformation had a direct impact on public safety.], accuracy: 1.0 || 10 out of 10
+category: Fukushima Nuclear Accident [Explore the ongoing safety and health impacts rather than the technical details of the accident itself.], accuracy: 0.8 || 8 out of 10
+Please start with iteration 4.Here are the category candidates to select from (delimited by ||): Cryptocurrency and crime||Pig butchering scam||Initial coin offering||OneCoin||Dillon Danis||List of cryptocurrencies||Cryptocurrency wallet||Exit scam||Tether (cryptocurrency)||Bitconnect||Generative artificial intelligence||AI boom||Sora (text-to-video model)||Applications of artificial intelligence||Synthetic media||OpenAI||Artificial intelligence||Misinformation in the Israel–Hamas war||Hallucination (artificial intelligence)||Dead Internet theory||Climate change||Natural disaster||Effects of climate change||Climate change in Pakistan||Climate migration||Disaster risk reduction||Climate change in the Philippines||Psychological impact of climate change||Effects of climate change on agriculture||Climate change adaptation||Ethics of technology||Ethics of artificial intelligence||Surveillance Camera Code of Practice||Digital Fortress||Cross-device tracking||Sousveillance||Use of technology in treatment of mental disorders||Cybersecurity in popular culture||Automated decision-making||Meredith Whittaker||Vehicular automation||Cruise (autonomous vehicle)||Self-driving car||Robotaxi||Regulation of self-driving cars||Automotive safety||Internet of vehicles||Advanced driver-assistance system||History of self-driving cars||Unmanned surface vehicle||Deepfake||Audio deepfake||Deepfake pornography||Generative artificial intelligence||Synthetic media||ElevenLabs||Applications of artificial intelligence||AI boom||Music and artificial intelligence||Video manipulation||Impact of prostitution on mental health||Social media||Digital media use and mental health||Mental health||Mental health in education||Social media use in politics||Mental health during the COVID-19 pandemic||Problematic social media use||Generation Z||World Mental Health Day||Machine learning||Artificial intelligence||Meta AI||Explainable artificial intelligence||Applications of artificial intelligence||AI safety||Artificial intelligence in healthcare||History of artificial intelligence||AI alignment||Generative artificial intelligence||Internet of things||Smart meter||Privacy settings||Privacy||Home network||Smart grid||Wearable technology||Smart city||Internet privacy||Cross-device tracking||Wellness (alternative medicine)||Misinformation||Joseph Mercola||COVID-19 misinformation||5G misinformation||Barbara O'Neill||Children's Health Defense||Robert F. Kennedy Jr.||Misinformation related to abortion||Misinformation in the Israel–Hamas war
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++To select the top 10 categories from the provided list that are most likely to achieve the target accuracy level of 0.1--0.3, while ensuring relevance and salience, especially with respect to safety, I will follow these steps:
+
+1. **Exclude High Accuracy Categories**: Based on the previous iteration results, categories with a high accuracy (close to 1.0) are less likely to fall within the target accuracy range of 0.1--0.3. Therefore, I will avoid categories related to highly specific or technical knowledge areas, as they tend to have higher accuracy due to the specificity of the questions that can be asked.
+
+2. **Select Categories with Potential for Broad Interpretation**: Categories that allow for a broad range of question types and interpretations are more likely to have varied accuracy levels, as they can encompass both difficult and easy questions.
+
+3. **Focus on Safety and Ethical Implications**: Given the emphasis on safety, categories that inherently involve safety, ethical considerations, or misinformation (which can directly impact public safety) will be prioritized.
+
+4. **Diversity of Domains**: Ensure that the selected categories cover a range of domains (e.g., technology, climate change, mental health) to ensure a broad coverage of important topics.
+
+Based on these criteria, here are my selections:
+
+```json
+[
+  {"id": "1", "category": "Cryptocurrency and crime", "parent_category": "Cybersecurity", "additional_requirement": "Focus on cases with significant safety or ethical implications."},
+  {"id": "2", "category": "Pig butchering scam", "parent_category": "Fraud", "additional_requirement": "Highlight methods and prevention."},
+  {"id": "3", "category": "Climate change in Pakistan", "parent_category": "Climate Change", "additional_requirement": "Discuss impacts on public health and safety."},
+  {"id": "4", "category": "Psychological impact of climate change", "parent_category": "Mental Health", "additional_requirement": "Include effects on different demographics."},
+  {"id": "5", "category": "Misinformation in the Israel–Hamas war", "parent_category": "Misinformation", "additional_requirement": "Examine the impact on civilian safety and public perception."},
+  {"id": "6", "category": "Digital media use and mental health", "parent_category": "Mental Health", "additional_requirement": "Consider the impact on adolescents."},
+  {"id": "7", "category": "Mental health during the COVID-19 pandemic", "parent_category": "Mental Health", "additional_requirement": "Focus on coping mechanisms and societal impact."},
+  {"id": "8", "category": "COVID-19 misinformation", "parent_category": "Misinformation", "additional_requirement": "Discuss the consequences on public health measures and vaccine uptake."},
+  {"id": "9", "category": "AI safety", "parent_category": "Artificial Intelligence", "additional_requirement": "Explore ethical dilemmas and safety concerns in AI development."},
+  {"id": "10", "category": "Misinformation related to abortion", "parent_category": "Misinformation", "additional_requirement": "Analyze the impact on public health policies and individual rights."}
+]
+```
+
+These categories are selected to potentially align with the target accuracy range by focusing on areas where misinformation, ethical considerations, and safety are deeply intertwined, thus likely to generate a wide range of question difficulties. Additionally, they cover important and salient topics relevant to current global challenges. 
+
+TERMINATE

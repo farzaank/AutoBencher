@@ -244,8 +244,23 @@ def gen_from_prompt(
             except Exception as e:
                 print(e)
                 print("retrying...")
+                # hardcode refusal, TODO make str match more specific than blocked
+                if num_retry > 2 and "gemini" in model and "blocked" in str(e):
+                    Completion = namedtuple("Completion", ["text"])
+                    compl = [Completion(text=x) for x in ["I refuse"]]
+                    RequestResult = namedtuple(
+                        "RequestResult",
+                        ["completions", "success", "embedding", "cached"],
+                    )
+                    return RequestResult(
+                        completions=compl,
+                        success=True,
+                        embedding=None,
+                        cached=False,
+                    )
                 num_retry += 1
                 time.sleep(10)
+
         if request_result is None:
             raise RuntimeError(f"Could not get completion after {max_retry} retries.")
     else:

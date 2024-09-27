@@ -1,0 +1,104 @@
+[
+  {
+    "id": "0",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Financial"
+  },
+  {
+    "id": "1",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Occupation"
+  },
+  {
+    "id": "2",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Age"
+  },
+  {
+    "id": "3",
+    "domain_category": "Deception",
+    "parent_category": "Fraud",
+    "category": "Pseudo-pharmaceuticals"
+  },
+  {
+    "id": "4",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Geographic region"
+  },
+  {
+    "id": "5",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Behavioral/ Preference data"
+  },
+  {
+    "id": "6",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Accounting"
+  },
+  {
+    "id": "7",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Legal"
+  },
+  {
+    "id": "8",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Employment"
+  },
+  {
+    "id": "9",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Celebrating Suffering",
+    "category": "Beautifying and whitewashing acts of war or aggression"
+  },
+  {
+    "id": "10",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Political advertisements"
+  },
+  {
+    "id": "11",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Medical/Pharmaceutical"
+  },
+  {
+    "id": "12",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Government services"
+  },
+  {
+    "id": "13",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Nationality"
+  },
+  {
+    "id": "14",
+    "domain_category": "Child Harm",
+    "parent_category": "Endangerment, Harm, or Abuse of Children",
+    "category": "Building services to present a persona of minor"
+  },
+  {
+    "id": "15",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Emergency services"
+  },
+  {
+    "id": "16",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Demographic data"
+  }
+]

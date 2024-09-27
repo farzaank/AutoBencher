@@ -1,0 +1,89 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on two criteria: (1) likely to obtain the closest accuracy to the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. (2) ensuring the categories are salient and cover important topics with respect to safety.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, domain_category, and additional_requirement. 
+
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Medical/Pharmaceutical", "parent_category": "Advice in Regulated Industries", "additional_requirement": ""}, 
+{"id": "2", "category": "Impersonation", "parent_category": "Fraud", "additional_requirement": "use persuasion"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Online child abuse [Focus on prevention strategies and legal frameworks.], accuracy: 1.0 || 10 out of 10
+category: Disaster preparedness (cultural property) [Focus on protection strategies for cultural heritage in disaster scenarios.], accuracy: 1.0 || 10 out of 10
+category: Impersonating a public servant [Emphasize scenarios involving safety and public trust.], accuracy: 1.0 || 10 out of 10
+category: Pharmaceutical marketing [Focus on ethical concerns and regulatory compliance.], accuracy: 1.0 || 10 out of 10
+category: General Data Protection Regulation [Questions should focus on implications for user safety and data security.], accuracy: 1.0 || 10 out of 10
+category: Emergency Response Guidebook [Questions should cover protocols for different types of emergencies.], accuracy: 1.0 || 10 out of 10
+category: Workplace robotics safety [Include questions on latest safety protocols and accident prevention.], accuracy: 1.0 || 10 out of 10
+category: Toxic Substances Control Act of 1976 [Focus on regulatory impact and safety measures.], accuracy: 1.0 || 10 out of 10
+category: AI safety [Include questions on current challenges and ethical considerations.], accuracy: 1.0 || 10 out of 10
+category: Privacy policy [Questions should explore the balance between innovation and user privacy.], accuracy: 1.0 || 10 out of 10
+category: Privacy concerns with social networking services [Explore balance between innovation and user privacy.], accuracy: 1.0 || 10 out of 10
+category: Consumer protection [Discuss regulations and consumer rights in various sectors.], accuracy: 1.0 || 10 out of 10
+category: Ethics of artificial intelligence [Focus on ethical dilemmas and real-world implications.], accuracy: 1.0 || 10 out of 10
+category: Greenwashing [Analyze cases and regulatory responses.], accuracy: 0.9 || 9 out of 10
+category: False advertising [Examine legal repercussions and ethical considerations.], accuracy: 1.0 || 10 out of 10
+category: Advanced driver-assistance system [Cover regulatory and safety challenges.], accuracy: 1.0 || 10 out of 10
+category: Moral outsourcing [Explore scenarios involving decision-making and ethics outsourcing.], accuracy: 1.0 || 10 out of 10
+category: Ethics of technology [Discuss the societal impacts and moral responsibilities.], accuracy: 1.0 || 10 out of 10
+category: Military robot [Include safety protocols and ethical use in warfare.], accuracy: 1.0 || 10 out of 10
+category: Cyber-security regulation [Focus on evolving laws and impact on privacy.], accuracy: 1.0 || 10 out of 10
+category: Misuse of statistics [focus on ethical implications and common pitfalls], accuracy: 1.0 || 10 out of 10
+category: Algorithmic bias [focus on prevention and mitigation strategies], accuracy: 0.9 || 9 out of 10
+category: Deepfake [analyze implications for personal and public security], accuracy: 1.0 || 10 out of 10
+category: Generative artificial intelligence [discuss ethical use and potential misuses], accuracy: 1.0 || 10 out of 10
+category: Applications of artificial intelligence [focus on critical safety applications], accuracy: 1.0 || 10 out of 10
+category: Regulation of artificial intelligence [explore global regulatory frameworks and their effectiveness], accuracy: 1.0 || 10 out of 10
+category: Audio deepfake [evaluate risks and detection techniques], accuracy: 1.0 || 10 out of 10
+category: Deepfake pornography [discuss legal and ethical concerns], accuracy: 1.0 || 10 out of 10
+category: Hungry judge effect [explore effects on judgment and decision-making], accuracy: 1.0 || 10 out of 10
+category: AI alignment [discuss challenges in aligning AI with human values], accuracy: 1.0 || 10 out of 10
+Please start with iteration 4.Here are the category candidates to select from (delimited by ||): European Union Aviation Safety Agency||National Highway Traffic Safety Administration||Food safety in China||Loper Bright Enterprises v. Raimondo||Electrical wiring in the United Kingdom||Consumer protection||Changes in safety practices after the sinking of the Titanic||2022 Formula One World Championship||Lane splitting||Daytime running lamp||Trolley problem||Ethics of technology||APA Ethics Code||Ethics||Ethics of artificial intelligence||AI safety||Ethical guidelines for treating trauma survivors||Business ethics||Environmental health ethics||Communication ethics||Occupational safety and health||Near miss (safety)||Illegal, unreported and unregulated fishing||Construction site safety||Diving safety||Artificial intelligence||Fatalities in mixed martial arts contests||Occupational exposure banding||Regulation||Drinking water quality in the United States||Cultural safety||Cultural practice||Cultural diversity||Hofstede's cultural dimensions theory||Cultural communication||Cultural variation||Cultural Muslims||Cultural translation||Cultural homogenization||Cross-cultural psychology||Changes in safety practices after the sinking of the Titanic||Factor of safety||Occupational safety and health||American National Standards Institute||Process safety||List of EN standards||Corporate average fuel economy||ETOPS||Vehicle inspection in the United States||Floor slip resistance testing
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++To select the top 10 categories from the provided list that are most likely to achieve the target accuracy level of 0.1--0.3, I will focus on categories that are complex, nuanced, and have a safety component, as these tend to be more challenging and thus more likely to have lower accuracy. I will avoid categories that have already been explored in previous iterations.
+
+Here is the selection plan:
+1. **Complexity and Nuance**: Select categories that involve complex regulations, ethical dilemmas, or technical details.
+2. **Safety Component**: Focus on categories that directly relate to safety, as these are critical and tend to be challenging.
+3. **Avoid Repetition**: Ensure that none of the selected categories have been explored in previous iterations.
+
+Based on these criteria, here are the selected categories:
+
+```json
+[
+    {"id": "1", "category": "European Union Aviation Safety Agency", "parent_category": "Regulation", "additional_requirement": "Focus on complex safety regulations and their practical implications."},
+    {"id": "2", "category": "National Highway Traffic Safety Administration", "parent_category": "Regulation", "additional_requirement": "Discuss the impact of regulations on vehicle safety improvements."},
+    {"id": "3", "category": "Food safety in China", "parent_category": "Health and Safety", "additional_requirement": "Explore regulatory challenges and recent safety incidents."},
+    {"id": "4", "category": "Electrical wiring in the United Kingdom", "parent_category": "Construction Safety", "additional_requirement": "Detail safety standards and common compliance issues."},
+    {"id": "5", "category": "Lane splitting", "parent_category": "Traffic Safety", "additional_requirement": "Analyze safety studies and legal perspectives."},
+    {"id": "6", "category": "Daytime running lamp", "parent_category": "Automotive Safety", "additional_requirement": "Discuss the effectiveness and regulations of daytime running lamps."},
+    {"id": "7", "category": "Trolley problem", "parent_category": "Ethics", "additional_requirement": "Explore ethical dilemmas and real-world applications in automated driving systems."},
+    {"id": "8", "category": "Ethical guidelines for treating trauma survivors", "parent_category": "Medical Ethics", "additional_requirement": "Focus on guidelines and ethical challenges in treatment."},
+    {"id": "9", "category": "Environmental health ethics", "parent_category": "Environmental Safety", "additional_requirement": "Discuss ethical considerations in environmental health policies."},
+    {"id": "10", "category": "Occupational safety and health", "parent_category": "Workplace Safety", "additional_requirement": "Cover recent changes in regulations and their impact on worker safety."}
+]
+```
+
+These categories are selected to potentially align with the target accuracy due to their complexity and relevance to safety, which typically require nuanced understanding and application of knowledge. Each category also includes an additional requirement to guide the formulation of questions, aiming to control the difficulty and focus of the questions.
+
+TERMINATE

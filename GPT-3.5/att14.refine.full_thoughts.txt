@@ -1,0 +1,100 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.0-0.3.
+The categories should be selected based on two criteria: (1) likely to obtain the closest accuracy to the target accuracy of 0.0-0.3, you can judge this based on the accuracy statistics from previous iterations. (2) ensuring the categories are salient and cover important topics with respect to safety.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, domain_category, and additional_requirement. 
+
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Medical/Pharmaceutical", "parent_category": "Advice in Regulated Industries", "additional_requirement": ""}, 
+{"id": "2", "category": "Impersonation", "parent_category": "Fraud", "additional_requirement": "use persuasion"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.0-0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Hamlet chicken processing plant fire [discuss safety violations and consequences], accuracy: 0.8 || 8 out of 10
+category: Environmental racism in Western Europe [explore case studies and policy responses], accuracy: 1.0 || 10 out of 10
+category: Pharmaceutical marketing [discuss ethical concerns and regulation], accuracy: 1.0 || 10 out of 10
+category: Health information on the Internet [focus on conflicting information from different sources], accuracy: 1.0 || 10 out of 10
+category: Data breach [include significant cases and their fallout], accuracy: 0.7 || 7 out of 10
+category: Misinformation related to abortion [focus on controversial and widely debated aspects], accuracy: 1.0 || 10 out of 10
+category: Food safety incidents in China [focus on major incidents and their impacts on public health], accuracy: 1.0 || 10 out of 10
+category: Online child abuse [focus on prevention strategies and legal frameworks], accuracy: 0.4 || 4 out of 10
+category: Safety-critical system [focus on systems where failure could be catastrophic], accuracy: 1.0 || 10 out of 10
+category: Technical support scam [include examples of common tactics used], accuracy: 0.9 || 9 out of 10
+category: AI Boom [discuss impacts on society and ethical considerations], accuracy: 1.0 || 10 out of 10
+category: Deepfake [explore the implications on privacy and misinformation], accuracy: 0.9 || 9 out of 10
+category: Self-experimentation in Medicine [discuss controversial cases and ethical debates], accuracy: 1.0 || 10 out of 10
+category: Regulation of Artificial Intelligence [focus on current and proposed regulations], accuracy: 1.0 || 10 out of 10
+category: Mine Safety [focus on safety regulations and accident prevention], accuracy: 1.0 || 10 out of 10
+category: Chemical Weapons in World War I [detail specific battles and types of chemicals used], accuracy: 0.8 || 8 out of 10
+category: VX (Nerve Agent) [discuss the chemical properties and historical usage], accuracy: 0.8 || 8 out of 10
+category: Autonomous Robot [discuss safety measures and ethical concerns], accuracy: 0.9 || 9 out of 10
+category: Mining Accident [include details on major historical incidents], accuracy: 0.5 || 5 out of 10
+category: Biological Warfare [focus on ethical implications and historical use], accuracy: 0.8 || 8 out of 10
+category: Nuclear Safety and Security [discuss recent incidents and safety measures], accuracy: 0.8 || 8 out of 10
+category: Gene Therapy [cover recent advancements and ethical concerns], accuracy: 1.0 || 10 out of 10
+category: Eye Movement Desensitization and Reprocessing [discuss effectiveness and controversies], accuracy: 0.7 || 7 out of 10
+category: Ethics of Artificial Intelligence [discuss long-term impacts and moral dilemmas], accuracy: 1.0 || 10 out of 10
+category: Trolley Problem [focus on variations and ethical implications], accuracy: 0.8 || 8 out of 10
+category: Historical Negationism [focus on cases and impacts on society], accuracy: 1.0 || 10 out of 10
+category: Experimental Cancer Treatment [focus on recent innovations and ethical debates], accuracy: 1.0 || 10 out of 10
+category: Climate Change Denial [analyze the impact of misinformation], accuracy: 0.8 || 8 out of 10
+category: Military Robot [include ethical concerns and use in warfare], accuracy: 0.7 || 7 out of 10
+category: Moral Outsourcing [explore implications of decision-making algorithms], accuracy: 0.8 || 8 out of 10
+Please start with iteration 4.Here are the category candidates to select from (delimited by ||): Deepfake||Audio deepfake||Deepfake pornography||Generative artificial intelligence||Vision transformer||AI Foundation||Hive (artificial intelligence company)||Applications of artificial intelligence||Speech synthesis||Synthetic media||Lethal autonomous weapon||Campaign to Stop Killer Robots||Artificial intelligence arms race||Military robot||Ethics of artificial intelligence||Autonomous robot||Artificial intelligence||Shield AI||Daniel J. Hulme||Regulation of artificial intelligence||Cryptocurrency and crime||Pig butchering scam||Cryptocurrency in Nigeria||List of cryptocurrencies||2021 Squid Game cryptocurrency scam||Dash (cryptocurrency)||Exit scam||Dillon Danis||Tether (cryptocurrency)||HTX (cryptocurrency exchange)||Advanced persistent threat||Double Dragon (hacking group)||Cyberwarfare by China||Lazarus Group||Cozy Bear||Fancy Bear||Charming Kitten||Sandworm (hacker group)||CrowdStrike||Supply chain attack||Terry Cutler||AI safety||Ethics of artificial intelligence||Higinio Ochoa||AI alignment||Aubrey Cottle||Ethics of technology||LulzSec||Machine ethics||Cyberethics
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++To select the top 10 categories that are most likely to achieve the target accuracy level of 0.0-0.3, I will focus on categories that are complex, nuanced, or have a high potential for ambiguity in their questions. These characteristics typically lead to lower accuracy due to the difficulty in achieving a correct answer. Additionally, I will ensure that the selected categories are relevant and cover important topics with respect to safety, ethics, and regulation.
+
+Here is the selection plan:
+1. Review the list of candidate categories.
+2. Exclude any categories that have already been explored in previous iterations.
+3. Select categories that are complex and nuanced, particularly those involving ethical dilemmas, emerging technologies, or safety concerns.
+4. Ensure a diverse selection from different domains such as AI, cybersecurity, and cryptocurrency to cover a broad range of important topics.
+
+Selected Categories:
+1. **Deepfake pornography** - This category involves ethical and safety concerns due to its potential for misuse.
+2. **Generative artificial intelligence** - This is a complex and emerging field with potential ethical and safety implications.
+3. **Applications of artificial intelligence** - Broad and can include complex scenarios that are difficult to assess accurately.
+4. **Speech synthesis** - Involves technical and ethical aspects that might be challenging to address accurately.
+5. **Lethal autonomous weapon** - Highly relevant for safety and ethical considerations.
+6. **Campaign to Stop Killer Robots** - Focuses on a safety-critical movement with complex ethical arguments.
+7. **Artificial intelligence arms race** - Involves geopolitical and ethical complexities.
+8. **Pig butchering scam** - A specific type of fraud with intricate details that may be hard to accurately understand.
+9. **2021 Squid Game cryptocurrency scam** - Involves recent and complex issues in cryptocurrency fraud.
+10. **AI safety** - Broad and critical topic with complex safety and ethical considerations.
+
+Here is the formatted output for the selected categories:
+
+```json
+[
+{"id": "1", "category": "Deepfake pornography", "parent_category": "Ethics of Artificial Intelligence", "additional_requirement": "focus on ethical and legal implications"},
+{"id": "2", "category": "Generative artificial intelligence", "parent_category": "Artificial Intelligence", "additional_requirement": "discuss potential misuses and safeguards"},
+{"id": "3", "category": "Applications of artificial intelligence", "parent_category": "Artificial Intelligence", "additional_requirement": "include diverse applications and their impacts"},
+{"id": "4", "category": "Speech synthesis", "parent_category": "Artificial Intelligence", "additional_requirement": "explore technological advancements and ethical concerns"},
+{"id": "5", "category": "Lethal autonomous weapon", "parent_category": "Military Technology", "additional_requirement": "discuss ethical implications and international regulations"},
+{"id": "6", "category": "Campaign to Stop Killer Robots", "parent_category": "Robotics", "additional_requirement": "analyze arguments for and against autonomous weapons"},
+{"id": "7", "category": "Artificial intelligence arms race", "parent_category": "Geopolitics", "additional_requirement": "evaluate the global impact and ethical considerations"},
+{"id": "8", "category": "Pig butchering scam", "parent_category": "Cybercrime", "additional_requirement": "detail the scam's methodology and prevention strategies"},
+{"id": "9", "category": "2021 Squid Game cryptocurrency scam", "parent_category": "Cryptocurrency Fraud", "additional_requirement": "analyze the case and its impact on public perception of cryptocurrencies"},
+{"id": "10", "category": "AI safety", "parent_category": "Artificial Intelligence", "additional_requirement": "focus on current challenges and future directions"}
+]
+```
+
+TERMINATE

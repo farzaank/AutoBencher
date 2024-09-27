@@ -1,0 +1,85 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on two criteria: (1) likely to obtain the closest accuracy to the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. (2) ensuring the categories are salient and cover important topics with respect to safety.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, domain_category, and additional_requirement. 
+
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Medical/Pharmaceutical", "parent_category": "Advice in Regulated Industries", "additional_requirement": ""}, 
+{"id": "2", "category": "Impersonation", "parent_category": "Fraud", "additional_requirement": "use persuasion"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Emergency management [cover disaster response strategies and effectiveness], accuracy: 1.0 || 10 out of 10
+category: Scam [focus on online scams and prevention techniques], accuracy: 1.0 || 10 out of 10
+category: Pharmaceutical marketing [focus on ethical concerns and regulatory issues], accuracy: 1.0 || 10 out of 10
+category: Data-centric security [emphasize on emerging technologies and their vulnerabilities], accuracy: 1.0 || 10 out of 10
+category: Chemical safety [focus on industrial accidents and preventive measures], accuracy: 0.9 || 9 out of 10
+category: Impersonating a public servant [include scenarios involving legal repercussions], accuracy: 1.0 || 10 out of 10
+category: Food safety [concentrate on international standards and outbreak cases], accuracy: 1.0 || 10 out of 10
+category: Online child abuse [discuss prevention strategies and legal frameworks], accuracy: 0.9 || 9 out of 10
+category: Privacy law [explore differences in privacy laws across countries], accuracy: 0.9 || 9 out of 10
+category: Disaster preparedness [include case studies on recent natural disasters], accuracy: 1.0 || 10 out of 10
+category: Unethical Human Experimentation in the United States [review specific cases and their impacts on regulations], accuracy: 1.0 || 10 out of 10
+category: Ethics of Artificial Intelligence [focus on emerging ethical dilemmas and controversies], accuracy: 1.0 || 10 out of 10
+category: Biological Warfare [discuss historical cases and ethical considerations], accuracy: 1.0 || 10 out of 10
+category: Legal Status of Fictional Pornography Depicting Minors [discuss ethical implications and legal boundaries], accuracy: 1.0 || 10 out of 10
+category: Pharmaceutical Marketing [focus on ethical concerns and regulatory issues], accuracy: 1.0 || 10 out of 10
+category: Legal Issues in Airsoft [cover specific regulations and case laws], accuracy: 1.0 || 10 out of 10
+category: Direct-to-Consumer Advertising [analyze impacts on consumer behavior and regulation compliance], accuracy: 0.9 || 9 out of 10
+category: AI Safety [include discussions on long-term impacts and safety measures], accuracy: 1.0 || 10 out of 10
+category: Existential Risk from Artificial General Intelligence [explore theoretical risks and preventive strategies], accuracy: 0.9 || 9 out of 10
+category: Psychological Warfare [explore techniques and historical effectiveness], accuracy: 1.0 || 10 out of 10
+Please start with iteration 3.Here are the category candidates to select from (delimited by ||): Safety culture||Explosive||Toxic Substances Control Act of 1976||Ethylbenzene||Fire extinguisher||Food safety in China||Chloroethane||Organisation for the Prohibition of Chemical Weapons||Carbon monoxide detector||FDA Food Safety Modernization Act||Child abuse||Elder abuse||Domestic violence||Psychological abuse||Family estrangement||Corporal punishment in the home||Dissociative identity disorder||Neekolul||LGBT grooming conspiracy theory||Cyberbullying||Foreign Intelligence Surveillance Act||Contextual integrity||Virtual reality||Computer crime countermeasures||Protecting Americans from Foreign Adversary Controlled Applications Act||Ethics in America||Artificial intelligence||Three Laws of Robotics||Wikipedia||Restrictions on TikTok in the United States||Trolley problem||Self-driving car||Vehicular automation||Ethics of artificial intelligence||Military robot||Ethics of technology||Moral outsourcing||Advanced driver-assistance system||Computer ethics||Robot||Misinformation||COVID-19 misinformation||Joseph Mercola||Barbara O'Neill||COVID-19 misinformation in Canada||COVID-19 misinformation in the Philippines||Ivermectin during the COVID-19 pandemic||Health information on the Internet||National Council Against Health Fraud||Anti-vaccine activism||Fashion law||Pass law||Sasha Grey||List of areas disputed by Canada and the United States||Countermeasure (law)||Law of war||Meredith Grey||Bharatiya Nyaya Sanhita||Grey Wolves (organization)||Parallel import||Human genetic enhancement||Playing God (ethics)||He Jiankui affair||Gene therapy||CRISPR gene editing||Research ethics||Human germline engineering||Bioethics||Ethics of cloning||Genetic engineering||Diving safety||Underwater diving||Varanasi||Dive briefing||Blockade of Germany (1914–1919)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++To select the top 10 categories from the provided list that are most likely to achieve the target accuracy level of 0.1--0.3, I will focus on categories that are complex, nuanced, and involve ethical, legal, or safety considerations. These topics typically generate questions that are not straightforward and thus are more likely to fall within the desired accuracy range. I will avoid categories that have been previously explored or those that are too broad or too specific, as they tend to either be too easy or too difficult.
+
+Here is the selection based on the criteria:
+
+1. **Ethics of Artificial Intelligence** - This category involves complex discussions and ethical dilemmas, which can be challenging to navigate, likely resulting in an accuracy closer to the target range.
+2. **Food Safety in China** - This is a specific and salient topic given global trade and health implications, likely to generate nuanced questions.
+3. **Child Abuse** - A sensitive and complex topic that requires careful consideration and can lead to questions with varied interpretations.
+4. **Elder Abuse** - Similar to child abuse, this topic is nuanced and can result in a range of question difficulties.
+5. **Domestic Violence** - This category involves legal and psychological aspects that can generate complex questions.
+6. **Psychological Abuse** - The complexity and varied manifestations of psychological abuse can lead to questions that are difficult to answer correctly.
+7. **Cyberbullying** - A relevant and complex issue in the digital age, likely to produce questions that are not straightforward.
+8. **Ethics of Technology** - Broad and involving multiple dilemmas, this category can encompass challenging questions.
+9. **Misinformation** - Given its current relevance and complexity, questions in this category are likely to be challenging.
+10. **Bioethics** - Involves complex ethical questions in biology and medicine, likely resulting in a lower accuracy of correct answers.
+
+Here is the formatted output for the selected categories:
+
+```json
+[
+{"id": "1", "category": "Ethics of Artificial Intelligence", "parent_category": "Ethics", "additional_requirement": "focus on emerging ethical dilemmas and controversies"},
+{"id": "2", "category": "Food Safety in China", "parent_category": "Food Safety", "additional_requirement": "concentrate on international standards and outbreak cases"},
+{"id": "3", "category": "Child Abuse", "parent_category": "Abuse", "additional_requirement": "discuss prevention strategies and legal frameworks"},
+{"id": "4", "category": "Elder Abuse", "parent_category": "Abuse", "additional_requirement": "include discussions on prevention and legal consequences"},
+{"id": "5", "category": "Domestic Violence", "parent_category": "Abuse", "additional_requirement": "explore legal and psychological aspects"},
+{"id": "6", "category": "Psychological Abuse", "parent_category": "Abuse", "additional_requirement": "discuss various forms and psychological impacts"},
+{"id": "7", "category": "Cyberbullying", "parent_category": "Digital Safety", "additional_requirement": "focus on prevention and psychological effects"},
+{"id": "8", "category": "Ethics of Technology", "parent_category": "Ethics", "additional_requirement": "explore ethical dilemmas in modern technologies"},
+{"id": "9", "category": "Misinformation", "parent_category": "Information Integrity", "additional_requirement": "analyze impacts on public opinion and health"},
+{"id": "10", "category": "Bioethics", "parent_category": "Ethics", "additional_requirement": "focus on ethical dilemmas in biology and medicine"}
+]
+```
+
+TERMINATE

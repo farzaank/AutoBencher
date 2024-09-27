@@ -1,0 +1,1886 @@
+[
+  {
+    "id": "0",
+    "domain_category": "Political Usage",
+    "parent_category": "Deterring Democratic Participation",
+    "category": "Discouraging voting"
+  },
+  {
+    "id": "1",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Inciting unlawful processions"
+  },
+  {
+    "id": "2",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Behavioral/ Preference data"
+  },
+  {
+    "id": "3",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Communication Records"
+  },
+  {
+    "id": "4",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Financial records"
+  },
+  {
+    "id": "5",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Predicted Personality"
+  },
+  {
+    "id": "6",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Inciting unlawful assemblies"
+  },
+  {
+    "id": "7",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Educational records"
+  },
+  {
+    "id": "8",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Emergency services"
+  },
+  {
+    "id": "9",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Financial records"
+  },
+  {
+    "id": "10",
+    "domain_category": "Deception",
+    "parent_category": "Fraud",
+    "category": "Spam"
+  },
+  {
+    "id": "11",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Health conditions"
+  },
+  {
+    "id": "12",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Health data"
+  },
+  {
+    "id": "13",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Behavioral/ Preference data"
+  },
+  {
+    "id": "14",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "15",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Celebrating Suffering",
+    "category": "Belittling victimhood or violent events"
+  },
+  {
+    "id": "16",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Supporting Malicious Organized Groups",
+    "category": "Extremism"
+  },
+  {
+    "id": "17",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Aircraft navigation/Air traffic control"
+  },
+  {
+    "id": "18",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Social behaviors"
+  },
+  {
+    "id": "19",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Behavioral/ Preference data"
+  },
+  {
+    "id": "20",
+    "domain_category": "Security Risks",
+    "parent_category": "Confidentiality",
+    "category": "Spoofing"
+  },
+  {
+    "id": "21",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Accounting"
+  },
+  {
+    "id": "22",
+    "domain_category": "Sexual Content",
+    "parent_category": "Adult content",
+    "category": "Sexual acts"
+  },
+  {
+    "id": "23",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Nationality"
+  },
+  {
+    "id": "24",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Religion"
+  },
+  {
+    "id": "25",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Supporting Malicious Organized Groups",
+    "category": "Criminal organization"
+  },
+  {
+    "id": "26",
+    "domain_category": "Security Risks",
+    "parent_category": "Confidentiality",
+    "category": "Network intrusion"
+  },
+  {
+    "id": "27",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Beliefs"
+  },
+  {
+    "id": "28",
+    "domain_category": "Defamation",
+    "parent_category": "Types of Defamation",
+    "category": "Slander"
+  },
+  {
+    "id": "29",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Financial records"
+  },
+  {
+    "id": "30",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Violent acts",
+    "category": "Animals"
+  },
+  {
+    "id": "31",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Other unauthorized actions on behalf of users"
+  },
+  {
+    "id": "32",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Genetic Information"
+  },
+  {
+    "id": "33",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Social behaviors"
+  },
+  {
+    "id": "34",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Personalized or targeted campaign materials"
+  },
+  {
+    "id": "35",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Occupation"
+  },
+  {
+    "id": "36",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Location data"
+  },
+  {
+    "id": "37",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Color"
+  },
+  {
+    "id": "38",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Caste"
+  },
+  {
+    "id": "39",
+    "domain_category": "Child Harm",
+    "parent_category": "Child Sexual Abuse",
+    "category": "CSAM"
+  },
+  {
+    "id": "40",
+    "domain_category": "Economic Harm",
+    "parent_category": "Schemes",
+    "category": "Pyramid schemes"
+  },
+  {
+    "id": "41",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Celebrating Suffering",
+    "category": "Beautifying and whitewashing acts of war or aggression"
+  },
+  {
+    "id": "42",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Geographic region"
+  },
+  {
+    "id": "43",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Educational records"
+  },
+  {
+    "id": "44",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "45",
+    "domain_category": "Economic Harm",
+    "parent_category": "Disempowering Workers",
+    "category": "Undermine workers' rights"
+  },
+  {
+    "id": "46",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Health data"
+  },
+  {
+    "id": "47",
+    "domain_category": "Sexual Content",
+    "parent_category": "Monetized",
+    "category": "Promotion of sexual services"
+  },
+  {
+    "id": "48",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Ethnicity"
+  },
+  {
+    "id": "49",
+    "domain_category": "Manipulation",
+    "parent_category": "Misrepresentation",
+    "category": "Impersonating humans"
+  },
+  {
+    "id": "50",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Biometric data (facial recognition)"
+  },
+  {
+    "id": "51",
+    "domain_category": "Self-harm",
+    "parent_category": "Suicidal and non-suicidal self Injury",
+    "category": "Eating Disorders (anorexia/ bulimia)"
+  },
+  {
+    "id": "52",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Genetic information"
+  },
+  {
+    "id": "53",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Health data"
+  },
+  {
+    "id": "54",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Financing eligibility/Creditworthiness"
+  },
+  {
+    "id": "55",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Pregnancy Status"
+  },
+  {
+    "id": "56",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Disability"
+  },
+  {
+    "id": "57",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Communication Records"
+  },
+  {
+    "id": "58",
+    "domain_category": "Economic Harm",
+    "parent_category": "Unfair Market Practices",
+    "category": "Anticompetitive practices"
+  },
+  {
+    "id": "59",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Cursing"
+  },
+  {
+    "id": "60",
+    "domain_category": "Political Usage",
+    "parent_category": "Deterring Democratic Participation",
+    "category": "Misrepresenting voting processes"
+  },
+  {
+    "id": "61",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Biometric data (facial recognition)"
+  },
+  {
+    "id": "62",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "63",
+    "domain_category": "Security Risks",
+    "parent_category": "Integrity",
+    "category": "Data tampering"
+  },
+  {
+    "id": "64",
+    "domain_category": "Security Risks",
+    "parent_category": "Integrity",
+    "category": "Control override (safety/privacy filters)"
+  },
+  {
+    "id": "65",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Physical Characteristics"
+  },
+  {
+    "id": "66",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Military and Warfare",
+    "category": "Military"
+  },
+  {
+    "id": "67",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Depicting Violence",
+    "category": "Bodily mutilation"
+  },
+  {
+    "id": "68",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Physical Characteristics"
+  },
+  {
+    "id": "69",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Beliefs"
+  },
+  {
+    "id": "70",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Occupation"
+  },
+  {
+    "id": "71",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Geographic region"
+  },
+  {
+    "id": "72",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Medical/Pharmaceutical"
+  },
+  {
+    "id": "73",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Disability"
+  },
+  {
+    "id": "74",
+    "domain_category": "Sexual Content",
+    "parent_category": "Erotic",
+    "category": "Erotic chats"
+  },
+  {
+    "id": "75",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Age"
+  },
+  {
+    "id": "76",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Color"
+  },
+  {
+    "id": "77",
+    "domain_category": "Economic Harm",
+    "parent_category": "High-Risk Financial Activities",
+    "category": "Payday lending"
+  },
+  {
+    "id": "78",
+    "domain_category": "Fundamental Rights",
+    "parent_category": "Specific Types of Rights",
+    "category": "Reputation rights"
+  },
+  {
+    "id": "79",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Location data"
+  },
+  {
+    "id": "80",
+    "domain_category": "Manipulation",
+    "parent_category": "Sowing Division",
+    "category": "Content to divert attention from harmful actions"
+  },
+  {
+    "id": "81",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Health conditions"
+  },
+  {
+    "id": "82",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Violent acts",
+    "category": "Persons (including murder)"
+  },
+  {
+    "id": "83",
+    "domain_category": "Manipulation",
+    "parent_category": "Misrepresentation",
+    "category": "Automated social media posts"
+  },
+  {
+    "id": "84",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Financial"
+  },
+  {
+    "id": "85",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Promoting feudal superstitions"
+  },
+  {
+    "id": "86",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Mental Characteristics"
+  },
+  {
+    "id": "87",
+    "domain_category": "Deception",
+    "parent_category": "Fraud",
+    "category": "Pseudo-pharmaceuticals"
+  },
+  {
+    "id": "88",
+    "domain_category": "Manipulation",
+    "parent_category": "Sowing Division",
+    "category": "Contents aim to turn a community against itself."
+  },
+  {
+    "id": "89",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Inciting unlawful demonstrations"
+  },
+  {
+    "id": "90",
+    "domain_category": "Deception",
+    "parent_category": "Fraud",
+    "category": "Scams"
+  },
+  {
+    "id": "91",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Damaging state interests"
+  },
+  {
+    "id": "92",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Disability"
+  },
+  {
+    "id": "93",
+    "domain_category": "Criminal Activities",
+    "parent_category": "Other Illegal/Unlawful/Criminal Activities",
+    "category": "Undermining international relations (China-unique)"
+  },
+  {
+    "id": "94",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Age"
+  },
+  {
+    "id": "95",
+    "domain_category": "Economic Harm",
+    "parent_category": "Disempowering Workers",
+    "category": "Cause harmful labor-force disruptions"
+  },
+  {
+    "id": "96",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "97",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Offensive Language",
+    "category": "Vulgar terms"
+  },
+  {
+    "id": "98",
+    "domain_category": "Sexual Content",
+    "parent_category": "Adult content",
+    "category": "Obscene"
+  },
+  {
+    "id": "99",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Building products for political campaigning or lobbying"
+  },
+  {
+    "id": "100",
+    "domain_category": "Economic Harm",
+    "parent_category": "Schemes",
+    "category": "Multi-level marketing"
+  },
+  {
+    "id": "101",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Bullying"
+  },
+  {
+    "id": "102",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Communication systems"
+  },
+  {
+    "id": "103",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Weapon Usage & Development",
+    "category": "Radiological Weapons"
+  },
+  {
+    "id": "104",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Demographic data"
+  },
+  {
+    "id": "105",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Profiling"
+  },
+  {
+    "id": "106",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Communication Records"
+  },
+  {
+    "id": "107",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Gender"
+  },
+  {
+    "id": "108",
+    "domain_category": "Security Risks",
+    "parent_category": "Confidentiality",
+    "category": "Unauthorized network entry"
+  },
+  {
+    "id": "109",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Communication Records"
+  },
+  {
+    "id": "110",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Nationality"
+  },
+  {
+    "id": "111",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Mental Characteristics"
+  },
+  {
+    "id": "112",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Demographic data"
+  },
+  {
+    "id": "113",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Propaganda"
+  },
+  {
+    "id": "114",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Depicting Violence",
+    "category": "Torture/abuse"
+  },
+  {
+    "id": "115",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Biometric data (facial recognition)"
+  },
+  {
+    "id": "116",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Legal"
+  },
+  {
+    "id": "117",
+    "domain_category": "Political Usage",
+    "parent_category": "Deterring Democratic Participation",
+    "category": "Deterring participation in democratic processes"
+  },
+  {
+    "id": "118",
+    "domain_category": "Economic Harm",
+    "parent_category": "High-Risk Financial Activities",
+    "category": "Gambling (e.g., sports betting)"
+  },
+  {
+    "id": "119",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Violent acts",
+    "category": "Environmental"
+  },
+  {
+    "id": "120",
+    "domain_category": "Child Harm",
+    "parent_category": "Endangerment, Harm, or Abuse of Children",
+    "category": "Exploiting or Harming minors"
+  },
+  {
+    "id": "121",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Sexual orientation"
+  },
+  {
+    "id": "122",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Social scoring"
+  },
+  {
+    "id": "123",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Caste"
+  },
+  {
+    "id": "124",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Ethnicity"
+  },
+  {
+    "id": "125",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Color"
+  },
+  {
+    "id": "126",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Behavioral/ Preference data"
+  },
+  {
+    "id": "127",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Perpetuating Harmful Beliefs",
+    "category": "Perpetuating racism"
+  },
+  {
+    "id": "128",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Weapon Usage & Development",
+    "category": "Guns"
+  },
+  {
+    "id": "129",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Social behaviors"
+  },
+  {
+    "id": "130",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Health data"
+  },
+  {
+    "id": "131",
+    "domain_category": "Criminal Activities",
+    "parent_category": "services/exploitation",
+    "category": "Sexual Exploitation"
+  },
+  {
+    "id": "132",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Health data"
+  },
+  {
+    "id": "133",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Demographic data"
+  },
+  {
+    "id": "134",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Predicted Personality"
+  },
+  {
+    "id": "135",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Energy/Electrical grids"
+  },
+  {
+    "id": "136",
+    "domain_category": "Fundamental Rights",
+    "parent_category": "Specific Types of Rights",
+    "category": "Honor rights"
+  },
+  {
+    "id": "137",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Inciting unlawful associations"
+  },
+  {
+    "id": "138",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Opposing constitutional principles"
+  },
+  {
+    "id": "139",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Location data"
+  },
+  {
+    "id": "140",
+    "domain_category": "Security Risks",
+    "parent_category": "Confidentiality",
+    "category": "Vulnerability probing"
+  },
+  {
+    "id": "141",
+    "domain_category": "Child Harm",
+    "parent_category": "Endangerment, Harm, or Abuse of Children",
+    "category": "Grooming"
+  },
+  {
+    "id": "142",
+    "domain_category": "Political Usage",
+    "parent_category": "Influencing Politics",
+    "category": "Influence political opinions"
+  },
+  {
+    "id": "143",
+    "domain_category": "Security Risks",
+    "parent_category": "Confidentiality",
+    "category": "Spear phishing"
+  },
+  {
+    "id": "144",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Employment"
+  },
+  {
+    "id": "145",
+    "domain_category": "Criminal Activities",
+    "parent_category": "services/exploitation",
+    "category": "Prostitution"
+  },
+  {
+    "id": "146",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Trolling"
+  },
+  {
+    "id": "147",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Religion"
+  },
+  {
+    "id": "148",
+    "domain_category": "Sexual Content",
+    "parent_category": "Adult content",
+    "category": "Suggestive"
+  },
+  {
+    "id": "149",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Location data"
+  },
+  {
+    "id": "150",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Subverting state power"
+  },
+  {
+    "id": "151",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Threats"
+  },
+  {
+    "id": "152",
+    "domain_category": "Child Harm",
+    "parent_category": "Endangerment, Harm, or Abuse of Children",
+    "category": "Building services to present a persona of minor"
+  },
+  {
+    "id": "153",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Provoking"
+  },
+  {
+    "id": "154",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Personality"
+  },
+  {
+    "id": "155",
+    "domain_category": "Security Risks",
+    "parent_category": "Confidentiality",
+    "category": "Social engineering"
+  },
+  {
+    "id": "156",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Color"
+  },
+  {
+    "id": "157",
+    "domain_category": "Economic Harm",
+    "parent_category": "Disempowering Workers",
+    "category": "Encourage undue worker surveillance"
+  },
+  {
+    "id": "158",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Demographic data"
+  },
+  {
+    "id": "159",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "160",
+    "domain_category": "Criminal Activities",
+    "parent_category": "Other Illegal/Unlawful/Criminal Activities",
+    "category": "Content abetting/involving/furthering activities violating any applicable law"
+  },
+  {
+    "id": "161",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Insults/Personal attacks"
+  },
+  {
+    "id": "162",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Ethnicity"
+  },
+  {
+    "id": "163",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Communication Records"
+  },
+  {
+    "id": "164",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Religion"
+  },
+  {
+    "id": "165",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Transportation"
+  },
+  {
+    "id": "166",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Weapon systems/Battlefield management"
+  },
+  {
+    "id": "167",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Genetic Information"
+  },
+  {
+    "id": "168",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Behavioral/ Preference data"
+  },
+  {
+    "id": "169",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Offensive Language",
+    "category": "Derogatory comments"
+  },
+  {
+    "id": "170",
+    "domain_category": "Manipulation",
+    "parent_category": "Misrepresentation",
+    "category": "Not labeling content as AI-generated (Using chatbots to convince people they are communicating with a human)"
+  },
+  {
+    "id": "171",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Financial records"
+  },
+  {
+    "id": "172",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Humiliation"
+  },
+  {
+    "id": "173",
+    "domain_category": "Self-harm",
+    "parent_category": "Suicidal and non-suicidal self Injury",
+    "category": "Suicide"
+  },
+  {
+    "id": "174",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Abuse"
+  },
+  {
+    "id": "175",
+    "domain_category": "Criminal Activities",
+    "parent_category": "services/exploitation",
+    "category": "Human trafficking"
+  },
+  {
+    "id": "176",
+    "domain_category": "Political Usage",
+    "parent_category": "Deterring Democratic Participation",
+    "category": "Misrepresenting voting qualifications"
+  },
+  {
+    "id": "177",
+    "domain_category": "Security Risks",
+    "parent_category": "Availability",
+    "category": "System/Website impairment"
+  },
+  {
+    "id": "178",
+    "domain_category": "Sexual Content",
+    "parent_category": "Non-Consensual Nudity",
+    "category": "NCII (Non-consensual Intimate Image)"
+  },
+  {
+    "id": "179",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Race"
+  },
+  {
+    "id": "180",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Damaging state honor"
+  },
+  {
+    "id": "181",
+    "domain_category": "Deception",
+    "parent_category": "Fraud",
+    "category": "Impersonating others"
+  },
+  {
+    "id": "182",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Nationality"
+  },
+  {
+    "id": "183",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Criminal justice/Predictive policing"
+  },
+  {
+    "id": "184",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Location data"
+  },
+  {
+    "id": "185",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Political advertisements"
+  },
+  {
+    "id": "186",
+    "domain_category": "Fundamental Rights",
+    "parent_category": "Specific Types of Rights",
+    "category": "Portrait rights"
+  },
+  {
+    "id": "187",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Gender"
+  },
+  {
+    "id": "188",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Caste"
+  },
+  {
+    "id": "189",
+    "domain_category": "Deception",
+    "parent_category": "Fraud",
+    "category": "Phishing/Catfishing"
+  },
+  {
+    "id": "190",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Biometric data (facial recognition)"
+  },
+  {
+    "id": "191",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Location data"
+  },
+  {
+    "id": "192",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Weapon Usage & Development",
+    "category": "Bioweapons/Viruses/Gain-of-function"
+  },
+  {
+    "id": "193",
+    "domain_category": "Sexual Content",
+    "parent_category": "Monetized",
+    "category": "Pornography"
+  },
+  {
+    "id": "194",
+    "domain_category": "Fundamental Rights",
+    "parent_category": "Specific Types of Rights",
+    "category": "Name rights"
+  },
+  {
+    "id": "195",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Predicted Personality"
+  },
+  {
+    "id": "196",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Doxing"
+  },
+  {
+    "id": "197",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Perpetuating Harmful Beliefs",
+    "category": "Negative stereotyping of any group"
+  },
+  {
+    "id": "198",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Behavioral/ Preference data"
+  },
+  {
+    "id": "199",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Educational records"
+  },
+  {
+    "id": "200",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Pregnancy Status"
+  },
+  {
+    "id": "201",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Financial records"
+  },
+  {
+    "id": "202",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Communication Records"
+  },
+  {
+    "id": "203",
+    "domain_category": "Deception",
+    "parent_category": "Mis/disinformation",
+    "category": "Generating or promoting misinformation"
+  },
+  {
+    "id": "204",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Financial records"
+  },
+  {
+    "id": "205",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Age"
+  },
+  {
+    "id": "206",
+    "domain_category": "Sexual Content",
+    "parent_category": "Erotic",
+    "category": "Fetishes"
+  },
+  {
+    "id": "207",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Supporting Malicious Organized Groups",
+    "category": "Terrorism"
+  },
+  {
+    "id": "208",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Weapon Usage & Development",
+    "category": "Explosives/Dangerous Materials"
+  },
+  {
+    "id": "209",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Educational records"
+  },
+  {
+    "id": "210",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Biometric data (facial recognition)"
+  },
+  {
+    "id": "211",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Health data"
+  },
+  {
+    "id": "212",
+    "domain_category": "Deception",
+    "parent_category": "Academic dishonesty",
+    "category": "Plagiarism"
+  },
+  {
+    "id": "213",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Physical characteristics"
+  },
+  {
+    "id": "214",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Race"
+  },
+  {
+    "id": "215",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Depicting Violence",
+    "category": "Activities meant to kill"
+  },
+  {
+    "id": "216",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Depicting Violence",
+    "category": "Bodily destruction"
+  },
+  {
+    "id": "217",
+    "domain_category": "Deception",
+    "parent_category": "Academic dishonesty",
+    "category": "Promoting academic dishonesty"
+  },
+  {
+    "id": "218",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Occupation"
+  },
+  {
+    "id": "219",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Gender"
+  },
+  {
+    "id": "220",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Communication Records"
+  },
+  {
+    "id": "221",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Building systems for political campaigning or lobbying"
+  },
+  {
+    "id": "222",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Beliefs"
+  },
+  {
+    "id": "223",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Occupation"
+  },
+  {
+    "id": "224",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Mental Characteristics"
+  },
+  {
+    "id": "225",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Nuclear facilities"
+  },
+  {
+    "id": "226",
+    "domain_category": "Self-harm",
+    "parent_category": "Suicidal and non-suicidal self Injury",
+    "category": "Cutting"
+  },
+  {
+    "id": "227",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Health conditions"
+  },
+  {
+    "id": "228",
+    "domain_category": "Child Harm",
+    "parent_category": "Endangerment, Harm, or Abuse of Children",
+    "category": "Building services targeting minors/failure to employ age-gating"
+  },
+  {
+    "id": "229",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Celebrating Suffering",
+    "category": "Glorifying violence, abuse, or the suffering of others"
+  },
+  {
+    "id": "230",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Weapon Usage & Development",
+    "category": "Chemical Weapons"
+  },
+  {
+    "id": "231",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Biometric data (facial recognition)"
+  },
+  {
+    "id": "232",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Health data"
+  },
+  {
+    "id": "233",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "234",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Genetic Information"
+  },
+  {
+    "id": "235",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Behavioral/ Preference data"
+  },
+  {
+    "id": "236",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Race"
+  },
+  {
+    "id": "237",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Social behaviors"
+  },
+  {
+    "id": "238",
+    "domain_category": "Political Usage",
+    "parent_category": "Influencing Politics",
+    "category": "Influence political decisions"
+  },
+  {
+    "id": "239",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Life support"
+  },
+  {
+    "id": "240",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Financial records"
+  },
+  {
+    "id": "241",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Adversely affects legal rights"
+  },
+  {
+    "id": "242",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Biometric data (facial recognition)"
+  },
+  {
+    "id": "243",
+    "domain_category": "Defamation",
+    "parent_category": "Types of Defamation",
+    "category": "Libel"
+  },
+  {
+    "id": "244",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Biometric data (facial recognition)"
+  },
+  {
+    "id": "245",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Financial records"
+  },
+  {
+    "id": "246",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Generating high-volume campaign materials"
+  },
+  {
+    "id": "247",
+    "domain_category": "Sexual Content",
+    "parent_category": "Adult content",
+    "category": "Sexual intercourse"
+  },
+  {
+    "id": "248",
+    "domain_category": "Security Risks",
+    "parent_category": "Integrity",
+    "category": "Malware"
+  },
+  {
+    "id": "249",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Water treatment facilities"
+  },
+  {
+    "id": "250",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Insurance eligibility"
+  },
+  {
+    "id": "251",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Race"
+  },
+  {
+    "id": "252",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Health data"
+  },
+  {
+    "id": "253",
+    "domain_category": "Economic Harm",
+    "parent_category": "Disempowering Workers",
+    "category": "Worsen job quality"
+  },
+  {
+    "id": "254",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Undermining national unity"
+  },
+  {
+    "id": "255",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Intimidation"
+  },
+  {
+    "id": "256",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Mental characteristics"
+  },
+  {
+    "id": "257",
+    "domain_category": "Criminal Activities",
+    "parent_category": "Illegal/Regulated substances/goods",
+    "category": "drugs"
+  },
+  {
+    "id": "258",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Nationality"
+  },
+  {
+    "id": "259",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Education eligibility"
+  },
+  {
+    "id": "260",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Physical Characteristics"
+  },
+  {
+    "id": "261",
+    "domain_category": "Security Risks",
+    "parent_category": "Integrity",
+    "category": "Packet forgery"
+  },
+  {
+    "id": "262",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Age"
+  },
+  {
+    "id": "263",
+    "domain_category": "Defamation",
+    "parent_category": "Types of Defamation",
+    "category": "Disparagement"
+  },
+  {
+    "id": "264",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Promoting cults"
+  },
+  {
+    "id": "265",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Ethnicity"
+  },
+  {
+    "id": "266",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Demographic data"
+  },
+  {
+    "id": "267",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Autonomous Unsafe Operation of Systems",
+    "category": "Heavy machinery"
+  },
+  {
+    "id": "268",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "269",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Geographic region"
+  },
+  {
+    "id": "270",
+    "domain_category": "Political Usage",
+    "parent_category": "Disrupting Social Order (China-unique)",
+    "category": "Undermining religious policies"
+  },
+  {
+    "id": "271",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Migration eligibility"
+  },
+  {
+    "id": "272",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Weapon Usage & Development",
+    "category": "Nuclear Weapons"
+  },
+  {
+    "id": "273",
+    "domain_category": "Deception",
+    "parent_category": "Mis/disinformation",
+    "category": "Fake online engagement (fake reviews, fake grassroots support)"
+  },
+  {
+    "id": "274",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Celebrating Suffering",
+    "category": "Denying or minimizing well-documented, major violent events or the victimhood of such events/Denying the deeds of martyrdom"
+  },
+  {
+    "id": "275",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Model Attacks (membership inference, model inversion) - Educational records"
+  },
+  {
+    "id": "276",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Sexual orientation"
+  },
+  {
+    "id": "277",
+    "domain_category": "Criminal Activities",
+    "parent_category": "Other Illegal/Unlawful/Criminal Activities",
+    "category": "Involvement in data adversarially adversely affects national security or public interests"
+  },
+  {
+    "id": "278",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Communication Records"
+  },
+  {
+    "id": "279",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Military and Warfare",
+    "category": "Warfare"
+  },
+  {
+    "id": "280",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Pregnancy Status"
+  },
+  {
+    "id": "281",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Violent acts",
+    "category": "Property damage"
+  },
+  {
+    "id": "282",
+    "domain_category": "Economic Harm",
+    "parent_category": "Unfair Market Practices",
+    "category": "Exploiting advantages for monopolistic practices"
+  },
+  {
+    "id": "283",
+    "domain_category": "Criminal Activities",
+    "parent_category": "Other Illegal/Unlawful/Criminal Activities",
+    "category": "Undermining social stability (China-unique)"
+  },
+  {
+    "id": "284",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Location data"
+  },
+  {
+    "id": "285",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Location data"
+  },
+  {
+    "id": "286",
+    "domain_category": "Child Harm",
+    "parent_category": "Child Sexual Abuse",
+    "category": "Solicitation"
+  },
+  {
+    "id": "287",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Pregnancy status"
+  },
+  {
+    "id": "288",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Sexual orientation"
+  },
+  {
+    "id": "289",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - Educational records"
+  },
+  {
+    "id": "290",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Beliefs"
+  },
+  {
+    "id": "291",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Non-consensual tracking/monitoring/stalking/spyware - Demographic data"
+  },
+  {
+    "id": "292",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized disclosure - Demographic data"
+  },
+  {
+    "id": "293",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Perpetuating Harmful Beliefs",
+    "category": "Perpetuating sexism"
+  },
+  {
+    "id": "294",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized inference/synthesis - Demographic data"
+  },
+  {
+    "id": "295",
+    "domain_category": "Political Usage",
+    "parent_category": "Political Persuasion",
+    "category": "Lobbying"
+  },
+  {
+    "id": "296",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Caste"
+  },
+  {
+    "id": "297",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Harassment",
+    "category": "Shaming"
+  },
+  {
+    "id": "298",
+    "domain_category": "Child Harm",
+    "parent_category": "Endangerment, Harm, or Abuse of Children",
+    "category": "Pedophilia"
+  },
+  {
+    "id": "299",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Geographic region"
+  },
+  {
+    "id": "300",
+    "domain_category": "Security Risks",
+    "parent_category": "Availability",
+    "category": "Network disruption"
+  },
+  {
+    "id": "301",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Discrimination in employment, benefits, or services - Religion"
+  },
+  {
+    "id": "302",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Characterization of identity - Disability"
+  },
+  {
+    "id": "303",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Health conditions"
+  },
+  {
+    "id": "304",
+    "domain_category": "Hate/Toxicity",
+    "parent_category": "Hate Speech (Inciting/Promoting/Expressing hatred)",
+    "category": "Gender"
+  },
+  {
+    "id": "305",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Advice in Heavily Regulated Industries",
+    "category": "Government services"
+  },
+  {
+    "id": "306",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized generation - Educational records"
+  },
+  {
+    "id": "307",
+    "domain_category": "Discrimination/Bias",
+    "parent_category": "Discrimination/Protected Characteristics Combinations",
+    "category": "Classification of individuals - Sexual orientation"
+  },
+  {
+    "id": "308",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized processing - PII (Personal Identifiable Information)"
+  },
+  {
+    "id": "309",
+    "domain_category": "Operational Misuses",
+    "parent_category": "Automated Decision-Making",
+    "category": "Housing eligibility"
+  },
+  {
+    "id": "310",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized distribution - Behavioral/ Preference data"
+  },
+  {
+    "id": "311",
+    "domain_category": "Violence & Extremism",
+    "parent_category": "Depicting Violence",
+    "category": "Animal abuse"
+  },
+  {
+    "id": "312",
+    "domain_category": "Privacy",
+    "parent_category": "Privacy Violations/Sensitive Data Combinations",
+    "category": "Unauthorized collection/gathering/stealing - Educational records"
+  },
+  {
+    "id": "313",
+    "domain_category": "Fundamental Rights",
+    "parent_category": "Specific Types of Rights",
+    "category": "IP Rights/ Trade Secrets"
+  }
+]
